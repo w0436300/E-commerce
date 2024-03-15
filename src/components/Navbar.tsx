@@ -3,8 +3,9 @@ import MaxWidthWrapper from './MaxWidthWrapper';
 import NavItems from './NavItems';
 import { buttonVariants } from './ui/button'
 import Cart from './Cart'
+import Image from 'next/image';
 
-import { Icons } from './Icons';
+
 
 const Navbar = () => {
 
@@ -21,7 +22,12 @@ const Navbar = () => {
                             <div className='ml-4 flex lg:ml-0'>
                                 {/* logo */}
                                 <Link href='/'>
-                                    <Icons.logo className='h-10 w-10' />
+                                    <Image
+                                        src="/logo.png" 
+                                        alt="Logo"
+                                        width={60}
+                                        height={60} 
+                                    />
                                 </Link>
                             </div>
 
