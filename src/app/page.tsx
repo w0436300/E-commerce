@@ -2,6 +2,8 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from 'next/link';
 import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
+import data from '../lib/data'
+import ProductItem from "@/components/products/ProductItem";
 
 const perks = [
   {
@@ -45,7 +47,7 @@ export default function Home() {
           <Link
               href='/products'
               className={buttonVariants()}>
-              Browse Trending
+              Browse Trend ing
           </Link>
           <Button variant='ghost'>
               Our quality promise &rarr;
@@ -80,6 +82,21 @@ export default function Home() {
             ))}
           </div>
         </MaxWidthWrapper>
+      </section>
+
+      <section className='w-full carousel rounded-box mt-4'>
+      <MaxWidthWrapper className="py-20">
+        <h2 className="text-2xl py-2">Latest Products</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        {data.products.map((product) => (
+          <ProductItem key={product.slug} product={product} />
+        ))}
+      </div>
+      </MaxWidthWrapper>
+     
+      
+
+
       </section>
 
     </>
