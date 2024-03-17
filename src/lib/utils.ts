@@ -27,5 +27,5 @@ export function formatPrice(
 
 }
 
-console.log(formatPrice(2));
-console.log(formatPrice(2500, { currency: 'EUR', notation: 'standard' }));
+export const round2 = (num: number) =>
+  Math.round((num + Number.EPSILON) * 100) / 100
