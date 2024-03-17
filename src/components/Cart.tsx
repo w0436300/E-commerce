@@ -5,10 +5,15 @@ import { ShoppingCart } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import { formatPrice } from '@/lib/utils'
 import { buttonVariants } from './ui/button'
+
 import useCartService from '@/lib/hooks/useCartStore'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+
+import Link from 'next/link'
+import Image from 'next/image'
+
 
 import {
   Sheet,
@@ -21,12 +26,13 @@ import {
 
 
 const Cart = () => {
+
   const { items } = useCartService()
   const [mounted, setMounted] = useState(false)
   useEffect(()=>{
     setMounted(true)
   },[])
-  
+
   const itemCount = 0
 
   const fee = 1
