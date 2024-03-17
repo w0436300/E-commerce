@@ -5,8 +5,10 @@ import { ShoppingCart } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import { formatPrice } from '@/lib/utils'
 import { buttonVariants } from './ui/button'
+import useCartService from '@/lib/hooks/useCartStore'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 import {
   Sheet,
@@ -19,6 +21,12 @@ import {
 
 
 const Cart = () => {
+  const { items } = useCartService()
+  const [mounted, setMounted] = useState(false)
+  useEffect(()=>{
+    setMounted(true)
+  },[])
+  
   const itemCount = 0
 
   const fee = 1
@@ -31,7 +39,11 @@ const Cart = () => {
           className='h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500'
         />
         <span className='ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800'>
-          0
+          {mounted && items.length != 0 && (
+                  <div className="badge badge-secondary">
+                    {items.reduce((a, c) => a + c.qty, 0)}{' '}
+                  </div>
+           )}
         </span>
       </SheetTrigger>
 
