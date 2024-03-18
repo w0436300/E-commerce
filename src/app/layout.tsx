@@ -4,6 +4,7 @@ import "./globals.css";
 import { relative } from "path";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import SessionWrapper from '@/components/SessionWrapper'
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,10 +16,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
+    <SessionWrapper>
+
     <html lang="en" className='h-full'>
       <body 
         className={ cn ( 
@@ -34,5 +37,7 @@ export default function RootLayout({
       </body>
           
     </html>
+    </SessionWrapper>
+
   );
 }

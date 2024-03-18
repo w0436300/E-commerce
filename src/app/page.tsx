@@ -7,22 +7,22 @@ import ProductItem from "@/components/products/ProductItem";
 
 const perks = [
   {
-    name: 'Instant Delivery',
+    name: 'First',
     Icon: ArrowDownToLine,
     description:
-      'Get your assets delivered to your email in seconds and download them right away.',
+      'HI Welcome to e-commerce store. ',
   },
   {
-    name: 'Guaranteed Quality',
+    name: 'Second',
     Icon: CheckCircle,
     description:
-      'Every asset on our platform is verified by our team to ensure our highest quality standards. Not happy? We offer a 30-day refund guarantee.',
+      'HI Welcome to e-commerce store. ',
   },
   {
-    name: 'For the Planet',
+    name: 'Third',
     Icon: Leaf,
     description:
-      "We've pledged 1% of sales to the preservation and restoration of the natural environment.",
+      "HI Welcome to e-commerce store. ",
   },
 ]
 
@@ -34,14 +34,13 @@ export default function Home() {
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           from page.tsx { ' '}
           <span className="text-blue-600">
-            digital assets
+            home
           </span>
           .
         </h1>
         <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
-          Welcome to DigitalHippo. Every asset on our
-            platform is verified by our team to ensure our
-            highest quality standards.
+          Welcome to e-commerce store. 
+          you are in the home page
         </p>
         <div className='flex flex-col sm:flex-row gap-4 mt-6'>
           <Link
