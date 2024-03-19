@@ -25,19 +25,19 @@ export const PRODUCT_CATEGORIES = [
     value: 'icons' as const,
     featured: [
       {
-        name: 'Favorite Icon Picks',
+        name: 'Favorite Product Picks',
         href: `/products?category=icons`,
-        imageSrc: '/nav/icons/picks.jpg',
+        imageSrc: '/images/shirt3.jpg',
       },
       {
         name: 'New Arrivals',
         href: '/products?category=icons&sort=desc',
-        imageSrc: '/nav/icons/new.jpg',
+        imageSrc: '/images/pants3.jpg',
       },
       {
-        name: 'Bestselling Icons',
+        name: 'Bestselling',
         href: '/products?category=icons',
-        imageSrc: '/nav/icons/bestsellers.jpg',
+        imageSrc: '/images/pants2.jpg',
       },
     ],
   },

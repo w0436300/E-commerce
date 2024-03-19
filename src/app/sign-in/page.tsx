@@ -60,6 +60,7 @@ const Signin = () => {
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <h2 className="text-center mb-4">Login to Your Account</h2>
+          <p className='text-amber-500'>The demo is under maintenance. Please do not try to log in. There is a risk of information leakage.</p>
           <div className="row">
             <div className="col">
             <button

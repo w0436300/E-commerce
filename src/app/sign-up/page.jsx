@@ -55,6 +55,8 @@ const Signup = () => {
   return (
     <main className="container">
       <h2 className="mb-4 text-center">Create an Account</h2>
+      <p className='text-amber-500'>The demo is under maintenance. Please do not try to log in. There is a risk of information leakage.</p>
+
 
       <div className="row">
         <div className="col">
