@@ -10,7 +10,7 @@ import Image from 'next/image';
 const Navbar = () => {
 
     const user = null
-
+ 
     return (
         <div className='bg-white sticky z-50 top-0 inset-x-0 h-16'>
             <div className='bg-white sticky z-50 top-0 inset-x-0 h-16'>
@@ -39,7 +39,14 @@ const Navbar = () => {
                             <div className='ml-auto flex items-center'>
                                 {/* Navbar-right: signin/ signup/ cart */}
                                 <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6'>
-                                    {user ? null : (
+                                    {user ? 
+                                        (<Link
+                                            href = '/profile'
+                                            > 
+                                         {user}
+                                    
+                                         </Link>) : (
+                                        
                                         <Link
                                             href='/sign-in'
                                             className={buttonVariants({
